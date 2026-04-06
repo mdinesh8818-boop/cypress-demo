@@ -24,4 +24,4 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npx cypress run --spec "cypress/e2e/**/*.cy.js"
+        run: npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }} --spec "cypress/e2e/**/*.cy.js"
